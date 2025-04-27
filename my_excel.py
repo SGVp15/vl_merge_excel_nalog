@@ -23,6 +23,7 @@ def save_excel_file(filename: str, data):
     ws = wb.active
     for row in data:
         ws.append(row)
+
     wb.save(filename)
 
 
