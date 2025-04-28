@@ -4,7 +4,7 @@ import re
 def parsing(data: list, header=None) -> []:
     act = data[0][0]
     company = data[1][0]
-    company = re.findall(r'".*" и (.*) по договору', company)[0]
+    company = re.findall(r' и (.*) по договору', company)[0]
     company = re.sub(r'\s*\(.*\)', '', company)
 
     start_n = 0
